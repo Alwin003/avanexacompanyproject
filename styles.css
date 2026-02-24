@@ -1,0 +1,335 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #222;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+.top-header {
+    background: #f8f9fa;
+    padding: 15px 0;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.green { color: #1bbf72; }
+.blue { color: #007bff; }
+
+.contact {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* BUTTONS */
+button {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-blue {
+    background: #007bff;
+    color: #fff;
+}
+
+.btn-green {
+    background: #1bbf72;
+    color: #fff;
+}
+
+.large-btn {
+    padding: 12px 25px;
+    margin-top: 20px;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    padding: 15px 0;
+}
+
+.navbar li {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.navbar .active {
+    color: #1bbf72;
+}
+
+/* HERO */
+.hero {
+    padding: 60px 0;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.hero-text span {
+    color: #1bbf72;
+}
+
+.hero-text p {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* HERO IMAGE */
+.hero-image {
+    position: relative;
+}
+
+.main-hero {
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Floating Images */
+.floating {
+    position: absolute;
+    width: 120px;
+}
+
+.top-card {
+    top: 10%;
+    left: -30px;
+}
+
+.mid-card {
+    top: 40%;
+    right: -30px;
+}
+
+.bottom-card {
+    bottom: 0;
+    left: 20%;
+}
+
+/* STATS */
+.stats {
+    background: #f4f6f8;
+    padding: 50px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 20px;
+}
+
+.stat-box h2 {
+    color: #1bbf72;
+    font-size: 28px;
+}
+
+/* ABOUT */
+.about {
+    padding: 60px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 450px;
+}
+
+/* SERVICES */
+.services {
+    background: #f8f9fa;
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.service-card img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+/* INVESTORS */
+.investors {
+    padding: 60px 0;
+}
+
+.investor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.investor-card {
+    text-align: center;
+}
+
+.investor-card img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* BLOG */
+.blog {
+    background: #f8f9fa;
+    padding: 60px 0;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.blog-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 992px) {
+    .hero-grid,
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .stats-grid,
+    .services-grid,
+    .investor-grid,
+    .blog-grid,
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 600px) {
+    .stats-grid,
+    .services-grid,
+    .investor-grid,
+    .blog-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .floating {
+        display: none;
+    }
+}
+
+/* ANIMATION EFFECTS */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ripple */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: rippleEffect 0.6s linear;
+}
+
+@keyframes rippleEffect {
+    to {
+        transform: scale(15);
+        opacity: 0;
+    }
+}
